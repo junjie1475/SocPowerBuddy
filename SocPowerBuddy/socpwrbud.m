@@ -319,8 +319,8 @@ int main(int argc, char * argv[])
             error(1, "Running this tool in a Virtual Machine is not allowed");
         }
         
-        if (([sd.extra[0] rangeOfString:@"pro"].location != NSNotFound) ||
-            ([sd.extra[0] rangeOfString:@"max"].location != NSNotFound))
+        if (([name rangeOfString:@"pro"].location != NSNotFound) ||
+            ([name rangeOfString:@"max"].location != NSNotFound))
         {
             sd.complex_pwr_channels = @[@"EACC_CPU", @"PACC0_CPU", @"PACC1_CPU", @"GPU0"];
             sd.core_pwr_channels    = @[@"EACC_CPU", @"PACC0_CPU", @"PACC1_CPU"];
